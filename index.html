@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shivani 💖</title>
+  <style>
+    body {
+      background: linear-gradient(#ffd1dc, #ffe6f0);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+    }
+    h1 { color: #d6336c; }
+    h2 { color: #6f1d1b; }
+    p  { font-size: 18px; max-width: 600px; margin: auto; }
+
+    button {
+      padding: 15px 35px;
+      font-size: 20px;
+      margin: 15px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: white;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>❤️ Shivani ❤️</h1>
+<h2>Will you be my Valentine? 💕</h2>
+
+<p>
+From the moment you came into my life, everything feels warmer and more beautiful.<br>
+You are my smile on hard days, my calm in chaos, and my favorite feeling.<br><br>
+So today, straight from my heart, I just want to ask…
+</p>
+
+<br>
+
+<button id="yes" onclick="yesClick()">Yes 💖</button>
+<button id="no" onclick="noClick()">No 😅</button>
+
+<script>
+function yesClick() {
+  document.body.innerHTML = `
+    <h1>💖 I Love You Shivani 💖</h1>
+    <p>
+    You just made my heart the happiest 🥰<br><br>
+    I promise to choose you every day, care for you, and love you a little more with time.<br><br>
+    Not just today, but always.
+    </p>
+  `;
+}
+
+function noClick() {
+  alert("Haha… nice try 😏 You already have my heart 💖");
+}
+</script>
+
+</body>
+</html>
