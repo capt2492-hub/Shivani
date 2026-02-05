@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
-  <title>Shivani 💖</title>
   <meta charset="UTF-8">
   <title>Shivani ❤️</title>
-<style>
-body {
-      background: linear-gradient(#ffd1dc, #ffe6f0);
+  <style>
+    body {
       margin: 0;
       height: 100vh;
       background: linear-gradient(#ffd6e8, #fff);
       display: flex;
       align-items: center;
       justify-content: center;
-text-align: center;
-font-family: Arial, sans-serif;
-      padding-top: 80px;
+      text-align: center;
+      font-family: Arial, sans-serif;
       overflow: hidden;
     }
 
@@ -26,32 +22,23 @@ font-family: Arial, sans-serif;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       max-width: 500px;
-}
-    h1 { color: #d6336c; }
-    h2 { color: #6f1d1b; }
-    p  { font-size: 18px; max-width: 600px; margin: auto; }
+    }
 
-button {
-      padding: 15px 35px;
-      font-size: 20px;
-      margin: 15px;
-      border-radius: 30px;
+    button {
       padding: 10px 20px;
       font-size: 18px;
       margin: 10px;
-border: none;
+      border: none;
       border-radius: 20px;
-cursor: pointer;
-}
+      cursor: pointer;
+    }
 
-#yes {
-background: #ff4d6d;
-color: white;
-}
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
 
-#no {
-      background: white;
-      color: #333;
+    #no {
       background: #ccc;
       color: black;
       position: relative;
@@ -67,22 +54,12 @@ color: white;
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-100vh); opacity: 0; }
-}
-</style>
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>❤️ Shivani ❤️</h1>
-<h2>Will you be my Valentine? 💕</h2>
-
-<p>
-From the moment you came into my life, everything feels warmer and more beautiful.<br>
-You are my smile on hard days, my calm in chaos, and my favorite feeling.<br><br>
-So today, straight from my heart, I just want to ask…
-</p>
-<body>
-
-<br>
   <div class="box">
     <p>
       From the moment you came into my life, everything feels warmer and more beautiful.<br><br>
@@ -90,20 +67,16 @@ So today, straight from my heart, I just want to ask…
       So today, straight from my heart, I just want to ask…
     </p>
 
-<button id="yes" onclick="yesClick()">Yes 💖</button>
-<button id="no" onclick="noClick()">No 😅</button>
     <button id="yes" onclick="magicHappen()">Yes ❤️</button>
     <button id="no" onmouseover="runAway()">No 😝</button>
   </div>
 
 <script>
-function yesClick() {
 let noCount = 0;
 
 function magicHappen() {
-document.body.innerHTML = `
-   <h1>💖 I Love You Shivani 💖</h1>
-    <img src="shivani3.jpg.jpeg" alt="Shivani" style="width:260px; border-radius:20px; margin-top:20px; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+  document.body.innerHTML = `
+    <h1>💖 I Love You Shivani 💖</h1>
 
     <img src="shivani3.jpg.jpeg" alt="Shivani"
       style="width:260px; border-radius:20px; margin:20px;
@@ -116,16 +89,13 @@ document.body.innerHTML = `
       allowfullscreen>
     </iframe>
 
-   <p>
-    You just made my heart the happiest 🥰<br><br>
-    I promise to choose you every day, care for you, and love you a little more with time.<br><br>
-    Not just today, but always.
+    <p>
       You just made my heart the happiest 🥰<br><br>
       I promise to choose you every day, care for you,<br>
       and love you a little more with time.<br><br>
       Not just today, but always ❤️
-   </p>
- `;
+    </p>
+  `;
 
   for (let i = 0; i < 30; i++) {
     let heart = document.createElement("div");
@@ -137,8 +107,6 @@ document.body.innerHTML = `
   }
 }
 
-function noClick() {
-  alert("Haha… nice try 😏 You already have my heart 💖");
 function runAway() {
   const noBtn = document.getElementById("no");
   noCount++;
@@ -155,3 +123,6 @@ function runAway() {
   }
 }
 </script>
+
+</body>
+</html>
