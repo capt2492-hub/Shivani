@@ -1,93 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shivani ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(#ffd6e8, #fff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
+<meta charset="UTF-8">
+<title>Shivani ❤️</title>
 
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 500px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#ffd6e8, #fff);
+  text-align: center;
+  overflow-x: hidden;
+}
 
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      margin: 10px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-    }
+.hidden { display: none; }
 
-    #yes {
-      background: #ff4d6d;
-      color: white;
-    }
+.box {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 520px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-    #no {
-      background: #ccc;
-      color: black;
-      position: relative;
-    }
+button {
+  padding: 12px 26px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
 
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      font-size: 24px;
-      animation: floatUp 4s linear infinite;
-    }
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
 
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-100vh); opacity: 0; }
-    }
-  </style>
+#no {
+  background: #ccc;
+  position: relative;
+}
+
+/* Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Birthday Page */
+#birthdayPage {
+  min-height: 100vh;
+  background: url("birthday-photo.jpg.jpeg") center/cover no-repeat;
+  color: white;
+  padding-top: 60px;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.65);
+  margin: 20px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* Balloons */
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  font-size: 40px;
+  animation: balloonUp 10s linear forwards;
+}
+
+@keyframes balloonUp {
+  to { transform: translateY(-120vh); }
+}
+
+/* Firecrackers */
+.spark {
+  position: fixed;
+  font-size: 22px;
+  animation: spark 1s ease-out forwards;
+}
+
+@keyframes spark {
+  to { transform: scale(2); opacity: 0; }
+}
+</style>
 </head>
 
 <body>
 
+<!-- VALENTINE PAGE -->
+<div id="valentinePage" class="box">
+  <h1>💖 Will You Be My Valentine? 💖</h1>
+
+  <p>
+    From the moment you came into my life, everything feels warmer and more beautiful.<br><br>
+    You are my smile on hard days, my calm in chaos, and my favorite feeling.<br><br>
+    So today, straight from my heart, I just want to ask…
+  </p>
+
+  <button id="yes" onclick="yesClick()">Yes ❤️</button>
+  <button id="no" onmouseover="runAway()">No 😝</button>
+</div>
+
+<!-- LOVE PAGE -->
+<div id="lovePage" class="hidden">
   <div class="box">
-    <p>
-      From the moment you came into my life, everything feels warmer and more beautiful.<br><br>
-      You are my smile on hard days, my calm in chaos, and my favorite feeling.<br><br>
-      So today, straight from my heart, I just want to ask…
-    </p>
-
-    <button id="yes" onclick="magicHappen()">Yes ❤️</button>
-    <button id="no" onmouseover="runAway()">No 😝</button>
-  </div>
-
-<script>
-let noCount = 0;
-
-function magicHappen() {
-  document.body.innerHTML = `
     <h1>💖 I Love You Shivani 💖</h1>
 
-    <img src="shivani3.jpg.jpeg" alt="Shivani"
-      style="width:260px; border-radius:20px; margin:20px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-
-    <iframe width="360" height="215"
-      src="https://www.youtube.com/embed/lKml0bQT63k?autoplay=1"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+    <img src="shivani3.jpg.jpeg"
+      style="width:260px;border-radius:20px;margin:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);">
 
     <p>
       You just made my heart the happiest 🥰<br><br>
@@ -95,9 +127,40 @@ function magicHappen() {
       and love you a little more with time.<br><br>
       Not just today, but always ❤️
     </p>
-  `;
 
-  for (let i = 0; i < 30; i++) {
+    <button onclick="openGift()">🎁 Open Your Gift</button>
+  </div>
+</div>
+
+<!-- BIRTHDAY PAGE -->
+<div id="birthdayPage" class="hidden">
+  <div class="overlay">
+    <h1>🎉 Happy Birthday Shivani 🎉</h1>
+
+    <p style="font-size:18px; line-height:1.6;">
+      Today isn’t just your birthday, it’s a celebration of you.<br><br>
+
+      Your dedication, your strength, and your dreams inspire me every single day.
+      I truly believe your dream of becoming a <b>Deputy Collector</b> will come true very soon,
+      because you deserve every bit of success that life has to offer.<br><br>
+
+      I’m so proud of your efforts, your patience, and your never-give-up attitude.<br><br>
+
+      May this year bring you happiness, success, and everything your heart wishes for.
+      And no matter what, I promise — we will walk this journey together, forever ❤️
+    </p>
+  </div>
+</div>
+
+<script>
+let noCount = 0;
+
+/* YES CLICK */
+function yesClick() {
+  document.getElementById("valentinePage").classList.add("hidden");
+  document.getElementById("lovePage").classList.remove("hidden");
+
+  for (let i = 0; i < 25; i++) {
     let heart = document.createElement("div");
     heart.className = "heart";
     heart.innerText = "💖";
@@ -107,20 +170,45 @@ function magicHappen() {
   }
 }
 
+/* NO BUTTON RUN */
 function runAway() {
-  const noBtn = document.getElementById("no");
   noCount++;
+  const noBtn = document.getElementById("no");
 
   if (noCount <= 3) {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
-
     noBtn.style.position = "absolute";
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+    noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
   } else {
     alert("You already stole my heart ❤️");
   }
+}
+
+/* GIFT BUTTON */
+function openGift() {
+  document.getElementById("lovePage").classList.add("hidden");
+  document.getElementById("birthdayPage").classList.remove("hidden");
+
+  // Balloons
+  for (let i = 0; i < 20; i++) {
+    let b = document.createElement("div");
+    b.className = "balloon";
+    b.innerText = "🎈";
+    b.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(b);
+  }
+
+  // Firecrackers (10–12 sec)
+  let fireInterval = setInterval(() => {
+    let s = document.createElement("div");
+    s.className = "spark";
+    s.innerText = "✨";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.top = Math.random() * 100 + "vh";
+    document.body.appendChild(s);
+  }, 200);
+
+  setTimeout(() => clearInterval(fireInterval), 12000);
 }
 </script>
 
